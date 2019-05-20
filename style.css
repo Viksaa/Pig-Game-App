@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* width: 100%;
+    height: 100%; */
+    /* box-sizing: border-box; */
+}
+
+body {
+    background: url('Images/back.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    font-family: Lato;
+    font-weight: 300;
+}
+
+.wrapper {
+    width: 1000px;
+    height: 650px;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 5px 300px 0 rgba(0, 0, 0, 0.4);
+}
+
+.player-0 {
+    width: 50%;
+    float: left;
+    height: 100%;
+    text-align: center;
+}
+
+.player-1 {
+    width: 50%;
+    float: right;
+    height: 100%;
+    text-align: center;
+}
+
+.activePlayer {
+    background: rgba(0, 0, 0, 0.03);
+}
+
+.activePlayer h1::after {
+    content: "\2022";
+    /* background: red;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    display: inline-block; */
+    color: red;
+    margin-left: 10px;
+}
+
+#score-0,
+#score-1 {
+    font-size: 70px;
+    font-weight: 300;
+    color: lightcoral;
+}
+
+.sign {
+    color: red;
+    font-size: 33px;
+    margin-right: 10px;
+    vertical-align: -2px;
+}
+
+#newGame {
+    background: transparent;
+    font-size: 25px;
+    cursor: pointer;
+    border: none;
+    position: absolute;
+    top: 50px;
+    /* left: 41%; */
+    transition: margin 0.3s;
+}
+
+#load {
+    background: transparent;
+    font-size: 25px;
+    cursor: pointer;
+    border: none;
+    position: absolute;
+    top: 420px;
+    /* left: 41%; */
+    transition: margin 0.3s;
+}
+
+#hold {
+    background: transparent;
+    font-size: 25px;
+    cursor: pointer;
+    border: none;
+    position: absolute;
+    top: 500px;
+    /* left: 44%; */
+    transition: margin 0.3s;
+}
+
+button:hover {
+    font-weight: 600;
+    margin-left: 20px;
+}
+
+button:hover span{
+    /* margin-right: 20px; */
+}
+
+button:focus {
+    outline: none;
+}
+
+button {
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+.content {
+    transform: translateY(100%);
+}
+
+.current {
+    background: lightcoral;
+    width: 120px;
+    height: 90px;
+    position: absolute;
+    /* transform: translateX(200%); */
+    top: 250px;
+    left: 200px;
+    text-align: center;
+}
+
+.current-label {
+    position: absolute;
+    top: 10px;
+    left: 33px;
+}
+
+#curr-1,
+#curr-0 {
+    position: relative;
+    top: 40px;
+    /* left: 55px; */
+    font-weight: 300;
+    font-size: 25px;
+    color: #fff;
+}
+
+#dice {
+    /* background: url('Images/dice-2.png');
+    background-size: cover; */
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    left: 50%;
+    top: 19%;
+    transform: translateX(-50%);
+    box-shadow: 5px 5px 300px 15px rgba(0, 0, 0, 0.2);
+}
+
+#dice2 {
+    /* background: url('Images/dice-2.png');
+    background-size: cover; */
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translateX(-50%);
+    box-shadow: 5px 5px 300px 15px rgba(0, 0, 0, 0.2);
+}
+
+.winner .player-name {
+    color: red;
+}
+
+#winningScore {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 570px;
+    color: #555;
+    font-size: 18px;
+    font-family: Lato;
+    text-align: center;
+    padding: 10px;
+    width: 160px;
+    text-transform: uppercase;
+}
+
+#winningScore:focus {
+    outline: none;
+}
